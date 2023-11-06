@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=League Spartan:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a
+{
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-right: 8px;
+    margin-top: 20px;
+    float: right;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a:hover 
+{
+    color: #ff4500;
+    text-decoration: none;
+}
+
+content
+{
+    width: auto;
+    height: auto;
+    font-weight: 500;
+    line-height: 130px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s; /* Fade in after a delay */
+}   
+
+
+
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevent scrolling while animating */
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+#box1 {
+    width: 530px;
+    height: 625px;
+    background-image: url("C:\Users\Administrator\Desktop\Work\WP\Project\1.jpeg");
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    opacity: 0;
+    animation: anim 2s forwards, anim2 3s forwards 3s;
+}
+
+@keyframes anim {
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(50%); /* Slide right to 50% of the screen */
+    }
+}
+
+@keyframes anim2 {
+    from {
+        transform: translateX(50%); /* Start from 50% of the screen */
+        background-image: url("C:\Users\Administrator\Desktop\Work\WP\Project\1.jpeg"); /* Start with 1.png */
+    }
+    to {
+        transform: translateX(100%); /* Slide right to 100% of the screen */
+        background-image: url("C:\Users\Administrator\Desktop\Work\WP\Project\1.jpeg"); /* Transition to 2.png */
+    }
+}
+
+#box2 {
+    width: auto;
+    height: auto;
+    color: #fff;
+    font-size: 8em;
+    font-weight: 500;
+    line-height: 130px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s; /* Fade in after a delay */
+}
+#textreg
+{
+    width: auto;
+    height: auto;    
+    font-weight: 500;
+    line-height: 30px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    color: white;
+    letter-spacing: 2px;
+    margin-right: 30px;
+    margin-top: 30px;
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s; /* Fade in after a delay */
+}
+#text2
+{
+    width: auto;
+    height: auto;
+    color: #000000;
+    font-size: 9em;
+    font-weight: 500;
+    line-height: 130px;
+    transform: scale(1.2);
+    transition: 0.3s;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#text h1::before {
+    content: "Initial Text"; /* Initial text content */
+    position: relative;
+    left: 0%;
+    animation: anim3 2s forwards 3s;
+}
+
+@keyframes anim3 {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+#box2:hover {
+    width: auto;
+    height: auto;
+    color: #ff4500;
+    font-size: 9em;
+    font-weight: 500;
+    line-height: 130px;
+    transform: scale(1.2);
+    transition: 0.3s;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+    overflow: hidden;
+}
+
+#box3 {
+    overflow: hidden;
+}
+
+#container {
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    animation: anim4 1s forwards 1.5s;
+}
+
+
+/* Add these styles to your existing style.css or create a new one */
+#logo h1 {
+    width: 200px; /* Set the width of the image */
+    height: 100px; /* Set the height of the image */
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url("C:\Users\Administrator\Desktop\Work\WP\Project\1.jpeg"); /* Set the initial image */
+    background-size: cover; /* Make sure the image covers the entire space */
+    transition: background-image 0.3s; /* Smooth transition for image change */
+    cursor: pointer;
+}
+
+#logo h1:hover {
+    background-image: url("C:\Users\Administrator\Desktop\Work\WP\Project\2.jpeg"); /* Change to a different image on hover */
+}
+
+#container1 {
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    animation: anim4 1s forwards 1.5s;
+}
+
+#menu {
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-right: 30px;
+    margin-top: 30px;
+    float: right;
+    text-transform: uppercase;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li {
+    display: inline-block;
+    margin-left: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#menu ul li:hover {
+    transform: scale(1.2);
+    color: #ff4500;
+}
+
+@keyframes anim4 {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0%;
+    }
+}

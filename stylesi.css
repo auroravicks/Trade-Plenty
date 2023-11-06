@@ -1,0 +1,338 @@
+/* Center-align the form */
+form {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Other styles */
+body {
+  background-color: black;
+  color: white;
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+
+/* Change the text box background color on hover */
+input[type="text"]:hover,
+input[type="password"]:hover,
+textarea:hover,
+select:hover {
+  align-content: center;
+  background-color: #ff4500;
+  box-shadow: 0 0 10px #ff9900;
+  transition: background-color 0.3s ease;
+  /* Smooth transition effect */
+}
+
+input[type="radio"] {
+  background-color: #333;
+  align-self: center;
+  /* Dark gray input background */
+  color: orange;
+  border: 1px solid #555;
+  /* Slightly lighter gray border */
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+input[type="radio"]:hover {
+  background-color: #ff4500;
+  color: 0 0 10px #ff9900;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  /* Smooth transition effect */
+}
+
+/* Style the submit and reset buttons */
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #ff4500;
+  width: 150px;
+  /* Set to orange */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition effect */
+}
+
+/* Add a glow effect to the submit and reset buttons on hover */
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #ff9900;
+  /* Lighter shade of orange */
+  box-shadow: 0 0 5px #ff9900;
+  font-size: 15px;
+  width: 160px;
+  /* Add a glowing effect on hover */
+}
+
+#box3 {
+  overflow: hidden;
+}
+
+#container {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 1s forwards 1.5s;
+}
+
+a {
+  color: #ff4500;
+  text-decoration: none;
+}
+
+a:hover {
+  align-self: center;
+  color: #ff9900;
+  /* Change the link color to orange on hover */
+  transform: scale(1.2);
+  ;
+}
+
+/* Add these styles to your existing style.css or create a new one */
+#logo h1 {
+  width: 200px;
+  /* Set the width of the image */
+  height: 100px;
+  /* Set the height of the image */
+  margin-top: 5px;
+  margin-left: 5px;
+  background-image: url('./images/1.png');
+  /* Set the initial image */
+  background-size: cover;
+  /* Make sure the image covers the entire space */
+  transition: background-image 0.3s;
+  /* Smooth transition for image change */
+  cursor: pointer;
+}
+
+#logo h1:hover {
+  background-image: url('./images/2.png');
+  /* Change to a different image on hover */
+}
+
+#container1 {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 1s forwards 1.5s;
+}
+
+#menu {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-right: 30px;
+  margin-top: 5px;
+  float: right;
+  text-transform: uppercase;
+}
+
+/* Style the menu links */
+#menu ul {
+  list-style: none;
+}
+
+#menu ul li {
+  display: inline-block;
+  margin-left: 30px;
+  transition: 0.3s;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  /* Remove underline from links */
+  color: white;
+  /* Set the link color to white */
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+  /* Smooth color and scale transition effect */
+}
+
+#menu ul li a:hover {
+  color: #ff4500;
+  /* Change the link color to orange on hover */
+  transform: scale(1.2);
+  /* Scale the link on hover */
+}
+
+
+@keyframes anim4 {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
+
+* {
+  box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+input[type="button"] {
+  background-color: #ff4500;
+  /* Set to orange */
+  color: white;
+  padding: 10px 20px;
+  width: 150px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition effect */
+}
+
+/* Add a glow effect to the submit and reset buttons on hover */
+input[type="button"]:hover {
+  width: 160px;
+  font-size: 15px;
+  text-align: center;
+  background-color: #ff9900;
+  /* Lighter shade of orange */
+  box-shadow: 0 0 5px #ff9900;
+  /* Add a glowing effect on hover */
+}

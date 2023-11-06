@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=League Spartan:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  /* Prevent scrolling while animating */
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#box1 {
+  width: 530px;
+  height: 625px;
+  background-image: url(./images/lp.png);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  opacity: 0;
+  animation: anim 2s forwards, anim2 3s forwards 3s;
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(50%);
+    /* Slide right to 50% of the screen */
+  }
+}
+
+@keyframes anim2 {
+  from {
+    transform: translateX(50%);
+    /* Start from 50% of the screen */
+    background-image: url(./images/1.png);
+    /* Start with 1.png */
+  }
+
+  to {
+    transform: translateX(100%);
+    /* Slide right to 100% of the screen */
+    background-image: url(./images/2.png);
+    /* Transition to 2.png */
+  }
+}
+
+
+#box2 {
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-size: 8em;
+  font-weight: 500;
+  line-height: 130px;
+  position: absolute;
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Center both vertically and horizontally */
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
+  /* Fade in after a delay */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+# @keyframes anim3 {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+#box2:hover {
+  width: auto;
+  height: auto;
+  color: #ff4500;
+  font-size: 9em;
+  font-weight: 500;
+  line-height: 130px;
+  transform: scale(1.2);
+  transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Center both vertically and horizontally */
+  overflow: hidden;
+}
+
+#text1 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+#box3 {
+  overflow: hidden;
+}
+
+#container {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 1s forwards 1.5s;
+}
+
+
+/* Add these styles to your existing style.css or create a new one */
+#logo h1 {
+  width: 200px;
+  /* Set the width of the image */
+  height: 100px;
+  /* Set the height of the image */
+  margin-top: 5px;
+  margin-left: 5px;
+  background-image: url('./images/1.png');
+  /* Set the initial image */
+  background-size: cover;
+  /* Make sure the image covers the entire space */
+  transition: background-image 0.3s;
+  /* Smooth transition for image change */
+  cursor: pointer;
+}
+
+#logo h1:hover {
+  background-image: url('./images/2.png');
+  /* Change to a different image on hover */
+}
+
+#container1 {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 1s forwards 1.5s;
+}
+
+#menu {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-right: 30px;
+  margin-top: 5px;
+  float: right;
+  text-transform: uppercase;
+}
+
+/* Style the menu links */
+#menu ul {
+  list-style: none;
+}
+
+#menu ul li {
+  display: inline-block;
+
+  margin-left: 30px;
+  transition: 0.3s;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  /* Remove underline from links */
+  color: white;
+  /* Set the link color to white */
+  cursor: pointer;
+  scrollbar-color: #ff4500;
+  transition: color 0.3s, transform 0.3s;
+  /* Smooth color and scale transition effect */
+}
+
+#menu ul li a:hover {
+  color: #ff4500;
+  /* Change the link color to orange on hover */
+  transform: scale(1.2);
+  /* Scale the link on hover */
+}
+
+
+@keyframes anim4 {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
+
+#box4 p {
+  position: fixed;
+  bottom: 10px;
+  /* Adjust the distance from the bottom as needed */
+  right: 10px;
+  /* Adjust the distance from the right as needed */
+  color: white;
+  font-size: 14px;
+  /* Add other styling as needed */
+}
+
+#box5 {
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 50px;
+  position: absolute;
+  text-transform: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
+}
+
+#box5:hover {
+  width: auto;
+  height: auto;
+  color: #ff4500;
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 50px;
+  text-transform: none;
+  transform: scale(1.0);
+  transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+}
+
+#box7 {
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-size: 20px;
+  /* Change font size to 20px */
+  font-weight: 100;
+  line-height: 50px;
+  position: absolute;
+  text-transform: none;
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Center both vertically and horizontally */
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
+  /* Fade in after a delay */
+}
